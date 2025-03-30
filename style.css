@@ -1,0 +1,106 @@
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey700: hsl(0, 0%, 20%);
+    --grey800: hsl(0, 0%, 12%);
+    --grey900: hsl(0, 0%, 8%);
+    --baseFontSize: 14px;
+    --offset: 16px;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/static/Inter-Regular.ttf') format('truetypoe');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/static/Inter-SemiBold.ttf') format('truetypoe');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/static/Inter-Bold.ttf') format('truetypoe');
+    font-weight: 700;
+    font-style: bold;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: var(--baseFontSize);
+    color: var(--white);
+    background-color: var(--grey900);
+}
+
+.user-socials {
+    width: 300px;
+    padding: var(--offset);
+    text-align: center;
+    background-color: var(--grey800);
+    border-radius: 20px;
+
+    .user-info {
+        font-weight: 700;
+
+        h1 {
+            margin-top: calc(var(--offset) * 1.2);
+            margin-bottom: calc(var(--offset) * 0.5);
+            font-size: 1.5rem;
+        }
+
+        .user-avatar {
+            border-radius: 50%;
+        }
+
+        .location-info {
+            color: var(--green);
+        }
+
+        .occupation {
+            margin-top: calc(var(--offset) * 1.5);
+            margin-bottom: var(--offset);
+            font-weight: 400;
+        }
+    }
+
+
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: var(--offset);
+        list-style-type: none;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: calc(var(--offset) * 2.5);
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            background-color: var(--grey700);
+            border-radius: 8px;
+
+            &:hover {
+                background-color: var(--green);
+                color: var(--grey900);
+            }
+        }
+    }
+}
